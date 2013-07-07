@@ -3,7 +3,7 @@ var fs = require('fs');
 var INDEX_HTML = 'index.html';
 var htmlText;
 
-fs.readFileSync(INDEX_JHML,htmlText);
+fs.readFileSync(INDEX_HTML,htmlText);
 
 app = express.createServer(express.logger());
 
