@@ -3,12 +3,13 @@ var fs = require('fs');
 var INDEX_HTML = 'index.html';
 var htmlText;
 
-fs.readFileSync(INDEX_HTML,htmlText);
+htmlText = fs.readFileSync(INDEX_HTML,"utf-8");
+//console.log(htmlText);
 
 app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(htmlText.toString());
+  response.send(htmlText);
 });
 
 var port = process.env.PORT || 5000;
