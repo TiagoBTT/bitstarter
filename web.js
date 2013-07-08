@@ -6,7 +6,7 @@ var htmlText;
 htmlText = fs.readFileSync(INDEX_HTML,"utf-8");
 //console.log(htmlText);
 
-app = express.createServer(express.logger());
+var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   response.send(htmlText);
